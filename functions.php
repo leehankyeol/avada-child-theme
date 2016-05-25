@@ -10,3 +10,6 @@ function avada_child_scripts() {
 
 }
 add_action('wp_enqueue_scripts', 'avada_child_scripts');
+
+// http://www.wpbeginner.com/wp-tutorials/how-to-add-search-form-in-your-post-with-a-wordpress-search-shortcode/
+add_shortcode('wpbsearch', 'get_search_form');
