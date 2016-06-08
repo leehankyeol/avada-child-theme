@@ -1,31 +1,41 @@
-jQuery(document).ready(function() {
-	jQuery('.main-nav-search .search-link').click(function(e) {
-		e.stopPropagation();
-		if(jQuery(this).parent().find('.main-nav-search-form').css('display') == 'block') {
-			jQuery(this).parent().find('.main-nav-search-form').hide();
-			jQuery(this).parent().removeClass( 'search-box-open' );
-		} else {
+(function($) {
+	'use strict';
 
-			jQuery(this).parent().find('.main-nav-search-form').removeAttr( 'style' );
-			jQuery(this).parent().find('.main-nav-search-form').show();
-			jQuery(this).parent().addClass( 'search-box-open' );
+	$(document).ready(function() {
+		$('.main-nav-search .search-link').click(function(e) {
+			e.stopPropagation();
+			if($(this).parent().find('.main-nav-search-form').css('display') == 'block') {
+				$(this).parent().find('.main-nav-search-form').hide();
+				$(this).parent().removeClass( 'search-box-open' );
+			} else {
 
-			// position main menu search box on click positioning
-			if( js_local_vars.header_position == 'Top' ) {
-				if( ! jQuery( 'body.rtl' ).length && jQuery(this).parent().find('.main-nav-search-form').offset().left < 0 ) {
-					jQuery(this).parent().find('.main-nav-search-form').css({
-						'left': '0',
-						'right': 'auto'
-					});
-				}
+				$(this).parent().find('.main-nav-search-form').removeAttr( 'style' );
+				$(this).parent().find('.main-nav-search-form').show();
+				$(this).parent().addClass( 'search-box-open' );
 
-				if( jQuery( 'body.rtl' ).length && jQuery(this).parent().find('.main-nav-search-form').offset().left + jQuery(this).parent().find('.main-nav-search-form').width()  > jQuery( window ).width() ) {
-					jQuery(this).parent().find('.main-nav-search-form').css({
-						'left': 'auto',
-						'right': '0'
-					});
+				// position main menu search box on click positioning
+				if( js_local_vars.header_position == 'Top' ) {
+					if( ! $( 'body.rtl' ).length && $(this).parent().find('.main-nav-search-form').offset().left < 0 ) {
+						$(this).parent().find('.main-nav-search-form').css({
+							'left': '0',
+							'right': 'auto'
+						});
+					}
+
+					if( $( 'body.rtl' ).length && $(this).parent().find('.main-nav-search-form').offset().left + $(this).parent().find('.main-nav-search-form').width()  > $( window ).width() ) {
+						$(this).parent().find('.main-nav-search-form').css({
+							'left': 'auto',
+							'right': '0'
+						});
+					}
 				}
 			}
-		}
+		});
+
+		// Avada's avada-header.js and all those js management are f***ed up...
+		setTimeout(function() {
+			$('.fusion-mobile-selector').find('span').remove();
+		}, 300);
+
 	});
-});
+})(jQuery);
