@@ -4,8 +4,25 @@ Description: Child theme for the Avada
 Author: Lee Han Kyeol
 Template: Avada
 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	font-family: 'Nanum Gothic', sans-serif !important;
+}
+
+.fusion-modal h1, .fusion-page-title-bar h1, .fusion-widget-area h1, .post-content h1,
+#main .post h2, #main .reading-box h2, #main h2, .ei-title h2, .fusion-modal h2, .fusion-title h2, .fusion-widget-area h2, .main-flex .slide-content h2, .post-content h2, .title h2,
+.fusion-main-menu > ul > li > a, .side-nav li a {
+	font-family: 'Nanum Gothic', sans-serif !important;	
+}
+
+/* Some font-family exceptions */
+.fusion-main-menu .fusion-main-menu-search a {
+	font-family: 'icomoon' !important;
+}
+
 #main .post h2.post-title a {
-	color: black;
+	/*color: black;*/
 	font-size: 16px;
 }
 #main p {
@@ -68,11 +85,12 @@ Template: Avada
 	}
 }
 
+#footer-profile img {
+	margin: 0 0 0 1em;
+}
+
 @media only screen and (max-device-width: 640px) and (min-device-width: 320px) {
 	/* Make footer better. */
-	#footer-profile img {
-		margin: 0 0 0 1em;
-	}
 	.fusion-columns .fusion-column {
 		font-size: 12px;
 	}
@@ -87,5 +105,16 @@ Template: Avada
 	.post-content p {
 		font-size: 16px !important;
 		line-height: 24px !important;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	/* Search form in mobile navigaton */
+	.fusion-menu .searchform {
+		margin-top: 0 !important;
+	}
+
+	.fusion-menu .searchform .search-button {
+		width: 29px;
 	}
 }

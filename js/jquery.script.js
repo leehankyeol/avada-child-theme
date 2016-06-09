@@ -32,10 +32,30 @@
 			}
 		});
 
+		var $fusionMobileSelector = $('.fusion-mobile-selector'),
+			$fusionMobileNavHolder = $('.fusion-mobile-nav-holder');
+
 		// Avada's avada-header.js and all those js management are f***ed up...
 		setTimeout(function() {
-			$('.fusion-mobile-selector').find('span').remove();
+			$fusionMobileSelector.find('span').remove();
+
+			var $searchList = $('<li/>', {
+				class: 'fusion-mobile-nav-item'
+			});
+			$searchList.html($('<form/>', {
+				role: 'search',
+				class: 'searchform',
+				method: 'get',
+				action: 'http://jjambong.com/',
+				html: '<div class="search-table"><div class="search-field">'
+				 + '<input type="text" value="" name="s" class="s" placeholder="검색..."></div>'
+				 + '<div class="search-button"><input type="submit" class="searchsubmit" value=""></div></div>'
+				 + '<input type="hidden" name="lang" value="en">'
+			}));
+			
+			$fusionMobileNavHolder.find('ul.fusion-menu').append($searchList);
 		}, 300);
+
 
 	});
 })(jQuery);
