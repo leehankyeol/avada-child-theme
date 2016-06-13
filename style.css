@@ -18,7 +18,7 @@ body {
 
 /* Narrow down the margin between the cards. */
 #posts-container.fusion-blog-layout-grid .fusion-post-grid {
-	padding: 3px !important;
+	padding: 5px !important;
 }
 
 /* Some font-family exceptions */
