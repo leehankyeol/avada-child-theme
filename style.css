@@ -16,6 +16,11 @@ body {
 	font-family: 'Nanum Gothic', sans-serif !important;	
 }
 
+/* Narrow down the margin between the cards. */
+#posts-container.fusion-blog-layout-grid .fusion-post-grid {
+	padding: 3px !important;
+}
+
 /* Some font-family exceptions */
 .fusion-main-menu .fusion-main-menu-search a {
 	font-family: 'icomoon' !important;
