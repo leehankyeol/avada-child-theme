@@ -123,3 +123,12 @@ body {
 		width: 29px;
 	}
 }
+
+/* Centering mobile menu hamberger icon. */
+.fusion-mobile-menu-icons {
+	text-align: center;
+}
+.fusion-mobile-menu-icons a {
+	float: none;
+	margin-left: 0;
+}
