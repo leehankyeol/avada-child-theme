@@ -132,3 +132,7 @@ body {
 	float: none;
 	margin-left: 0;
 }
+
+.fusion-main-menu .sub-menu li a {
+	font-size: 14px !important;
+}
