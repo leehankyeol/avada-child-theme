@@ -1555,5 +1555,18 @@ $body_classes[] = 'mobile-menu-design-' . $smof_data['mobile_menu_design'];
 		$main_class = 'width-100';
 	}
 	?>
+	<!-- Banner start / 20160825: A temporary banner. -->
+	<div style="
+	    text-align: center;
+	    width: 36%;
+	    margin: 20px auto;
+	    min-width: 320px;
+	"><a href="http://www.yes24.com/24/Goods/30695224?Acode=101" target="_blank"><img src="http://jjambong.com/wordpress/wp-content/themes/Avada-Child-Theme/banner.jpg" style="
+	    width: 100%;
+	"></a></div>
+	<style>
+		#main {padding-top: 0;}
+	</style>
+	<!-- / Banner end -->
 	<div id="main" class="clearfix <?php echo $main_class; ?>" style="<?php echo $main_css; ?>">
 		<div class="avada-row" style="<?php echo $row_css; ?>">
