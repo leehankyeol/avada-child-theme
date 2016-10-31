@@ -9,6 +9,22 @@ function avada_child_scripts() {
 add_action('wp_enqueue_scripts', 'avada_child_styles');
 add_action('wp_enqueue_scripts', 'avada_child_scripts', 20);
 
+function jjambong_banner() {
+        echo '<!-- Banner start / 20160825: A temporary banner. -->
+        <div style="
+            text-align: center;
+            width: 36%;
+            margin: 20px auto;
+            min-width: 320px;
+        "><a href="http://www.yes24.com/24/Goods/30695224?Acode=101" target="_blank"><img src="http://jjambong.com/wordpress/wp-content/themes/Avada-Child-Theme/banner.jpg" style="
+            width: 100%;
+        "></a></div>
+        <style>
+                #main {padding-top: 0;}
+        </style>';
+}
+add_action('avada_before_main_container', 'jjambong_banner');
+
 // http://www.wpbeginner.com/wp-tutorials/how-to-add-search-form-in-your-post-with-a-wordpress-search-shortcode/
 add_shortcode('wpbsearch', 'get_search_form');
 
