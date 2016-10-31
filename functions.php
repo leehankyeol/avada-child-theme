@@ -1,9 +1,6 @@
 <?php
 function avada_child_styles() {
-	if ( ! is_admin() && ! in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) ) {
-		$theme_info = wp_get_theme();
-		wp_enqueue_style( 'avada-child-stylesheet', get_template_directory_uri() . '/style.css', array(), $theme_info->get( 'Version' ) );
-	}
+        wp_enqueue_style( 'avada-child-stylesheet', get_stylesheet_uri());
 }
 function avada_child_scripts() {
         // TODO: Remove codes below when all plugins & themes support jQuery 1.12.x
