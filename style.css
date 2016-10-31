@@ -125,15 +125,15 @@ body {
 }
 
 /* Centering mobile menu hamberger icon. */
-.fusion-mobile-menu-icons {
+div.fusion-row div.fusion-mobile-menu-icons {
 	text-align: center;
 	clear: both;
 }
-.fusion-mobile-menu-icons a {
+div.fusion-row div.fusion-mobile-menu-icons a {
 	float: none;
 	margin-left: 0;
 }
 
-.fusion-main-menu .sub-menu {
+div.fusion-main-menu .sub-menu {
 	width: 177px !important;
 }
